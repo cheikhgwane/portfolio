@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { useState } from 'react'
+import './App.css'
+import ThemeContext, { themes } from './themes'
+import Home from './views/Home'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [mode, setMode] = useState('light')
+
+    const toggleTheme = () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
+    }
+
+    const theme = React.useMemo(() => createTheme({ ...themes[mode] }), [mode])
+
+    return (
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <ThemeProvider theme={theme}>
+                <Home />
+            </ThemeProvider>
+        </ThemeContext.Provider>
+    )
 }
 
-export default App;
+export default App
