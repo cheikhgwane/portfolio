@@ -1,0 +1,29 @@
+{
+    "menuItems": [
+        {
+            "label": "Home",
+            "linkTo": "/"
+        },
+        {
+            "label": "About",
+            "linkTo": "/about"
+        },
+        {
+            "label": "Skills",
+            "linkTo": "/skills"
+        },
+        {
+            "label": "Resume",
+            "linkTo": "/resume"
+        },
+        {
+            "label": "Contact me",
+            "linkTo": "/contacts"
+        },
+        {
+            "label": "Blog",
+            "linkTo": "/blog"
+        }
+    ],
+    "bannerText": "Hello! I'm CGW, a Full-Stack Developer and AI Enthusiast ^-^."
+}

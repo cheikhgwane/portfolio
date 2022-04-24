@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+.image {
+    border-radius: 50%;
+}
+
+h4 {
+    font-family: 'Raleway,  sans-serif';
+    font-weight: bold;
+}
